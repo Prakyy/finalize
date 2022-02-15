@@ -1,5 +1,5 @@
 #!/sbin/sh
-#Created by Prakyy @xda-developers >>
+#Created by Prakyy >>
 
 OUTFD=/proc/self/fd/$2;
 ZIPFILE="$3";
@@ -18,13 +18,13 @@ show_progress() { echo "progress $1 $2" >> $OUTFD; }
 #####################################################
 
 ui_print " "
-ui_print "Finalizing PiXeN-OS Installation..."
+ui_print "Finalizing OS Installation..."
 sleep 1
 ui_print " "
-ui_print "- Clearing Dalvik Cache"
+ui_print "- Clearing Dalvik cache"
 rm -rf /data/dalvik-cache/*
 sleep 1
-ui_print "- Deleting useless India partition"
+ui_print "- Trimming pointless partitions"
 rm -rf /data/india
 sleep 1
 
@@ -38,7 +38,7 @@ else
   suffix_swap="_a"
 fi
 
-ui_print "- Copying firmware to both slots"
+ui_print "- Applying firmware changes to both slots"
 ui_print " "
 show_progress 1.0 70
 
